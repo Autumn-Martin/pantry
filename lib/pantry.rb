@@ -22,4 +22,12 @@ class Pantry
       @stock[item] = amount + add_amount
     end
   end
+
+  def add_to_shopping_list(recipe)
+
+  end
+
+  def shopping_list
+
+  end 
 end
