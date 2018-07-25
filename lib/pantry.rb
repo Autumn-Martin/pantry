@@ -24,8 +24,16 @@ class Pantry
   end
 
   def add_to_shopping_list(recipe)
-    # WIP
+
+
+    # WIP - may need to map over
     @shopping_list[recipe.ingredients.keys] = recipe.ingredients.values #=> {["Cheese", "Flour"]=>[20, 20]}
+    # require 'pry'; binding.pry
+
+
+    # recipe.ingredients.map do |key, value|
+    #   @shopping_list[recipe.ingredients.key] = recipe.ingredients.value
+    # end
 
   end
 
