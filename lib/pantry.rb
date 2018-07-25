@@ -13,6 +13,10 @@ class Pantry
     end
   end
 
+  def add_stock(item)
+    @stock[item] = 0
+  end
+
   def restock(item, amount)
     @stock[:item] = 'amount' #=> 10
     # require 'pry'; binding.pry
