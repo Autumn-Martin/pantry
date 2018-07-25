@@ -7,7 +7,7 @@ class Pantry
   def stock_check(item)
     # @stock[:item]
     if @stock.include?(item)
-      @stock[:item]
+      @stock[item]
     else
       add_stock(item)
     end
@@ -17,8 +17,9 @@ class Pantry
     @stock[item] = 0
   end
 
-  def restock(item, amount)
-    @stock[:item] = amount #=> 10
-    # require 'pry'; binding.pry
+  def restock(item, add_amount)
+    @stock.map do |item, amount|
+      @stock[item] = amount + add_amount
+    end
   end
 end
