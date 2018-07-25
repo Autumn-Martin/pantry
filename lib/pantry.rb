@@ -1,12 +1,11 @@
 class Pantry
-  attr_reader :stock, :shopping_list
+  attr_reader :stock
   def initialize
     @stock = {}
     @shopping_list = {}
   end
 
   def stock_check(item)
-    # @stock[:item]
     if @stock.include?(item)
       @stock[item]
     else
@@ -25,8 +24,13 @@ class Pantry
   end
 
   def add_to_shopping_list(recipe)
-    # @shopping_list[@name] = @ingredients
+    # WIP
+    @shopping_list[recipe.ingredients.keys] = recipe.ingredients.values #=> {["Cheese", "Flour"]=>[20, 20]}
+
   end
 
+  def shopping_list
+    @shopping_list
+  end
 
 end
